@@ -1,0 +1,12 @@
+
+<figure class="chat-log">
+<blockquote>
+
+{{{ replace (call @partial-block) "@([^:]*):" "
+<b>$1</b>" }}}
+
+</blockquote>
+<figcaption>
+    💬 <a href="{{ discordUrl url }}">{{ datetime time }}</a>
+</figcaption>
+</figure>

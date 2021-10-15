@@ -1,0 +1,54 @@
+---
+title: This Week in HTMX
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/syntax-theme.css">
+    <script src="/node_modules/htmx.org/dist/htmx.js"></script>
+    <script src="/scripts/script.js" type="module"></script>
+
+    <meta property="og:title" content="{{ title }}">
+    {{#if Issue}}
+        <meta property="og:type" content="article">
+    {{/if}}
+    <meta property="og:site_name" content="This Week in HTMX">
+</head>
+<body hx-boost="true">
+    <header hx-preserve="true" class="site-header" id="site-header">
+        <nav>
+            <button type="button" class="menu-button"
+                    onclick="this.closest('.site-header')
+                                .classList.toggle('expanded')"
+                ><span role="img" aria-label="Expand menu">&#x2630;</button>
+            <ul role="list">
+                {{#each Navigation}}
+                    <li><a href="{{.}}">{{{@key}}}</a></li>
+                {{/each}}
+                <li><a href="/">Home</a></li>
+                <li><a href="/contribute/">Contribute</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="/feed/">Feed</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{{ content }}}
+    </main>
+
+    <style>
+        .site-header a[href="{{page.url}}"] {
+            text-decoration: underline;
+        }
+    </style>
+
+    <footer class="site-footer">
+        <p><small>&copy; 2021 This Week on HTMX Contributors</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeds — This Week on HTMX</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/syntax-theme.css">
+    <script src="/node_modules/htmx.org/dist/htmx.js"></script>
+    <script src="/scripts/script.js" type="module"></script>
+
+    <meta property="og:title" content="Feeds — This Week on HTMX">
+    <meta property="og:site_name" content="This Week in HTMX">
+</head>
+<body hx-boost="true">
+    <header hx-preserve="true" class="site-header" id="site-header">
+        <nav>
+            <button type="button" class="menu-button"
+                    onclick="this.closest('.site-header')
+                                .classList.toggle('expanded')"
+                ><span role="img" aria-label="Expand menu">&#x2630;</button>
+            <ul role="list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/contribute/">Contribute</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="/feed/">Feed</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+<header class="page-head">
+    <h1>Feeds — This Week on HTMX</h1>
+</header>
+
+<div class="-container">
+    <dl>
+        <div class="entry">
+            <dt>JSONFeed</dt>
+            <dd>
+                <code>https://thisweek.htmx.org/feed.json</code>
+                <button type="button" 
+                        onclick="
+                            navigator.clipboard.writeText(
+                                this.previousElementSibling.textContent)
+                            this.textContent = 'copied!'
+                            setTimeout(() => this.textContent = 'copy', 1000)"
+                    >copy</button></dd>
+        </div>
+    </dl>
+</div>
+
+    </main>
+
+    <style>
+        .site-header a[href="/feed/"] {
+            text-decoration: underline;
+        }
+    </style>
+
+    <footer class="site-footer">
+        <p><small>&copy; 2021 This Week on HTMX Contributors</small></p>
+    </footer>
+</body>
+</html>

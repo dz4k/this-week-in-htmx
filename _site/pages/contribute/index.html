@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/syntax-theme.css">
+
+    <meta property="og:title" content="This Week in HTMX">
+    <meta property="og:site_name" content="This Week in HTMX">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <ul role="list">
+                <li class="rightnav"><a href="#">Contribute</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+<header class="page-head">
+    <h1>Contribute to This Week on HTMX</h1>
+</header>
+
+<dl>
+    <div class="entry">
+        <dl>"You should run this story!"</dl>
+        <dt>
+            <a href="https://github.com/dz4k/this-week-on-htmx/issues/">Open an issue on our repository</a>, 
+            or email the editor 
+            (<a href="mailto:deniz+thisweek@denizaksimsek.com">deniz+thisweek@denizaksimsek.com</a>).
+        </dt>
+    </div>
+    <div class="entry">
+        <dl></dl>
+        <dt></dt>
+    </div>
+    <div class="entry">
+        <dl></dl>
+        <dt></dt>
+    </div>
+</dl>
+
+    </main>
+
+    <footer class="site-footer">
+        <p><small>&copy; 2021 This Week on HTMX Contributors</small></p>
+    </footer>
+
+    <script>
+        document.addEventListener('mousedown', e => {
+            if (e.target.closest(':link')) {
+                document.querySelectorAll('.page-head > *').forEach($el => {
+                    $el.style.animation = 'page-head-out 300ms ease-in-out'
+                })
+            }
+        })
+    </script>
+</body>
+</html>

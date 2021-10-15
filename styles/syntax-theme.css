@@ -1,0 +1,103 @@
+/**
+* Biluminal theme by Deniz Akşimşek <https://denizaksimsek.com>
+*/
+
+code,
+pre[class*="language-"] {
+    word-spacing: normal;
+    word-break: normal;
+
+    font-family: 'Source Code Pro', 'Ubuntu Mono', 'Consolas', monospace;
+    font-size: .9rem;
+    font-weight: 500;
+
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+code {
+    color: #595959;
+    filter: brightness(0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+    code {
+        filter: brightness(1.96);
+    }
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #058800;
+    font-style: italic;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.string,
+.token.attr-value {
+    color: #f13285;
+}
+
+.token.punctuation,
+.token.operator {
+    color: #73766E;
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+    color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name {
+    font-style: italic;
+    color: #0F76DC;
+}
+
+.token.function,
+.token.deleted {
+    color: #ec341f;
+}
+
+.token.tag,
+.token.selector {
+    color: #c15f07;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.hyperscript {
+    color: var(--color-foreground);
+}
+
+.token.comment {
+    font-family: var(--font-main);
+    letter-spacing: .04em;
+}

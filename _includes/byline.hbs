@@ -1,0 +1,12 @@
+
+<p>
+    <a href="{{ page.url }}" class="u-url u-uid">
+        <time class="dt-published">{{ isodate page.date }}</time>
+    </a>
+</p>
+<p>
+    {{#authors}}
+        <a href="{{ ./url }}" class="p-author h-card">{{ name }}</a>
+        {{~#unless @last}}, {{/unless}}
+    {{/authors}}
+</p>

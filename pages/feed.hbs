@@ -1,0 +1,26 @@
+---
+layout: base
+title: Feeds — This Week on HTMX
+permalink: /feed/
+---
+
+<header class="page-head">
+    <h1>{{title}}</h1>
+</header>
+
+<div class="-container">
+    <dl>
+        <div class="entry">
+            <dt>JSONFeed</dt>
+            <dd>
+                <code>https://thisweek.htmx.org/feed.json</code>
+                <button type="button" 
+                        onclick="
+                            navigator.clipboard.writeText(
+                                this.previousElementSibling.textContent)
+                            this.textContent = 'copied!'
+                            setTimeout(() => this.textContent = 'copy', 1000)"
+                    >copy</button></dd>
+        </div>
+    </dl>
+</div>
