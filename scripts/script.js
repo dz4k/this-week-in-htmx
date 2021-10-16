@@ -2,22 +2,40 @@
 Object.setPrototypeOf(NodeList.prototype, Array.prototype)
 
 // Collapsing navigation
+{
+    console.log('asdasd')
 
-console.log('asdasd')
+    let 
+        $nav = document.querySelector('.site-header'),
+        $menuButton = document.querySelector('.menu-button')
+        
+    let isOpen = false
+    let clientHeight = $nav.clientHeight
 
-let 
-    $nav = document.querySelector('.site-header'),
-    $menuButton = document.querySelector('.menu-button')
+    function update() {
+        const overflows = $nav.scrollHeight > clientHeight
+        $menuButton.style.display = overflows ? 'block' : 'none'
+        if (!overflows) toggle(false)
+    }
 
-function update() {
-    const overflows = $nav.scrollHeight > $nav.clientHeight
-    $menuButton.style.display = overflows ? 'block' : 'none'
+    window.addEventListener('resize', update)
+    update()
+
+    function toggle(doOpen) {
+        if (doOpen === isOpen) return
+        isOpen = doOpen
+        const
+            openFrame =   { maxHeight: $nav.scrollHeight + 'px', backgroundColor: 'black' },
+            closedFrame = { maxHeight: clientHeight      + 'px', backgroundColor: 'transparent' }
+            $nav.animate([
+                isOpen ? openFrame : closedFrame,
+            ], { duration: 200, easing: 'ease-in-out', fill: 'forwards' })
+    }
+
+    $menuButton.addEventListener('click', e => {
+        toggle(!isOpen);
+    })
 }
-
-window.addEventListener('resize', update)
-update()
-
-
 
 // Navigation animation
 {
