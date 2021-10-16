@@ -3,8 +3,6 @@ Object.setPrototypeOf(NodeList.prototype, Array.prototype)
 
 // Collapsing navigation
 {
-    console.log('asdasd')
-
     let 
         $nav = document.querySelector('.site-header'),
         $menuButton = document.querySelector('.menu-button')
@@ -17,7 +15,7 @@ Object.setPrototypeOf(NodeList.prototype, Array.prototype)
         $menuButton.style.display = overflows ? 'block' : 'none'
         if (!overflows) toggle(false)
     }
-
+    
     window.addEventListener('resize', update)
     update()
 
