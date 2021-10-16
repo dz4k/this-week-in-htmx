@@ -18,6 +18,11 @@ title: This Week in HTMX
         <meta property="og:type" content="article">
     {{/if}}
     <meta property="og:site_name" content="This Week in HTMX">
+
+    {{#if (eq page.url '/')}}
+        <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Atom">
+        <link rel="alternate" href="/feed.xml" type="application/feed+json" title="JSON Feed">
+    {{/if}}
 </head>
 <body hx-boost="true">
     <header hx-preserve="true" class="site-header" id="site-header">
