@@ -1,0 +1,26 @@
+---
+layout: false
+permalink: '/feed.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>This Week in HTMX</title>
+  <link href="https://thisweek.htmx.org{{permalink}}" rel="self"/>
+  <link href="https://thisweek.htmx.org/"/>
+  <updated>{{ collections.issue | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>https://thisweek.htmx.org/</id>
+  <author>
+    <name>Deniz Akşimşek</name>
+    <email>deniz@denizaksimsek.com</email>
+  </author>
+  {%- for post in collections.issue | reverse %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl('https://thisweek.htmx.org') }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
     require('./_build/generic_filters')(eleventyConfig)
     require('./_build/site_filters')(eleventyConfig)
 
+    eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-rss'))
     eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
         init: ({ Prism }) => {
             require('prism-hyperscript')(Prism)
