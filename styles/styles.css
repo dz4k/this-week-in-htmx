@@ -99,7 +99,7 @@ dl {
             flex-flow: row wrap;
             gap: 1em;
 
-            max-height: 3em;
+            max-height: 2em;
             overflow: hidden;
 
             list-style: none;
