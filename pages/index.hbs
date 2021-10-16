@@ -2,24 +2,27 @@
 layout: base
 permalink: /
 ---
-<div class="page-head">
-    <h1 class="massive-heading">{{ title }}</h1>
+<div class="h-feed">
+    <link href="/" class="u-url">
+    <div class="page-head">
+        <h1 class="p-name massive-heading">{{ title }}</h1>
 
-    <p>
-        A weekly summary of the goings-on in the HTMX community, curated by
-        <a href="https://denizaksimsek.com">Deniz Akşimşek</a>.
-    </p>
+        <p>
+            <span class="p-summary">A weekly summary of the goings-on in the HTMX community</span>, 
+            curated by <a class="p-author h-card" href="https://denizaksimsek.com">Deniz Akşimşek</a>.
+        </p>
+    </div>
+
+    <ol reversed role="list" class="-container">
+    {{#collections.issue}}
+        <li>
+            <article class="h-entry thisweek-issue issueheader">
+                <h2>
+                    <a class="p-name" href="{{ ./url }}">{{ data.title }}</a>
+                </h2>
+                {{> byline data}}
+            </article>
+        </li>
+    {{/collections.issue}}
+    </ol>
 </div>
-
-<ol reversed role="list" class="-container">
-{{#collections.issue}}
-    <li>
-        <article class="h-entry thisweek-issue issueheader">
-            <h2>
-                <a class="p-name" href="{{ ./url }}">{{ data.title }}</a>
-            </h2>
-            {{> byline data}}
-        </article>
-    </li>
-{{/collections.issue}}
-</ol>
