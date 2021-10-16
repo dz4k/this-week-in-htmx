@@ -29,10 +29,9 @@ title: This Week in HTMX
 <body hx-boost="true">
     <header hx-preserve="true" class="site-header" id="site-header">
         <nav>
-            <button type="button" class="menu-button"
-                    onclick="this.closest('.site-header')
-                                .classList.toggle('expanded')"
-                ><span role="img" aria-label="Expand menu">&#x2630;</button>
+            <button type="button" class="menu-button">
+                <span role="img" aria-label="Expand menu">&#x2630;</span>
+            </button>
             <ul role="list">
                 {{#each Navigation}}
                     <li><a href="{{.}}">{{{@key}}}</a></li>
