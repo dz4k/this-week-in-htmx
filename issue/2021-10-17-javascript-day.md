@@ -7,11 +7,11 @@ Authors:
 
 ## Carson gave a talk on htmx at JetBrains JavaScript Day 2021
 
-  In his talk "htmx: Writing JavaScript to Avoid Writing JavaScript", Carson
-  delivered a rationale and demonstration of htmx, and obligatory discussion
-  of REST/HATEOAS as usual... to an audience for whom it was quite out of the
-  ordinary. Was he provocative enough to get some JavaScripters curious? We'll
-  have to see. 
+  In his talk <cite>htmx: Writing JavaScript to Avoid Writing JavaScript</cite>,
+  Carson delivered a rationale and demonstration of htmx, and obligatory 
+  discussion of REST/HATEOAS as usual... to an audience for whom it was quite 
+  out of the ordinary. Was he provocative enough to get some JavaScripters 
+  curious? We'll have to see. 
   
   💙 to the conference organizers and attendees!
 
