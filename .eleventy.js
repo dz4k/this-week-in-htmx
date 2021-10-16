@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('styles')
     eleventyConfig.addPassthroughCopy('scripts')
+    eleventyConfig.addPassthroughCopy('assets')
     eleventyConfig.addPassthroughCopy({ 'node_modules/htmx.org/dist': '/vendor/htmx.org' })
 
     require('./_build/generic_filters')(eleventyConfig)
