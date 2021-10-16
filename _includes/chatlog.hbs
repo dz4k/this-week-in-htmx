@@ -2,8 +2,10 @@
 <figure class="chat-log">
 <blockquote>
 
-{{{ replace (call @partial-block) "@([^:]*):" "
-<b>$1</b>" }}}
+{{{ replace (call @partial-block) 
+    "@([^:]*):"               "<p><b>$1</b>"
+    "\[(\p{So})(\d+)\]"       "<span class='reaction'><span class='emoji'>$1</span> $2</span>"
+ }}}
 
 </blockquote>
 <figcaption>

@@ -49,8 +49,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('d', (...args) =>
         args.find(arg => arg !== undefined && arg !== null))
 
-    eleventyConfig.addFilter('replace', (haystack, needle, hay) => {
-        return haystack.replace(new RegExp(needle, 'g'), hay)
+    eleventyConfig.addFilter('replace', (haystack, ...rest) => {
+        for (let i = 1; i < rest.length; i += 2) {
+            const needle = rest[i - 1], hay = rest[i]
+            console.log('REPLACE', needle, hay)
+            haystack = haystack.replace(new RegExp(needle, 'gu'), hay)
+        }
+        return haystack
     })
 
     eleventyConfig.addFilter('truncateUrl', url => {

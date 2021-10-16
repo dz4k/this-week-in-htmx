@@ -177,6 +177,21 @@ dl {
     .chat-log > blockquote > p > b {
         margin-inline-end: 1ch;
     }
+
+    .chat-log .reaction {
+        display: inline-block;
+        font-size: .9em;
+        line-height: 1.4em;
+        background-color: #dadada;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding-inline: .3em;
+        margin-inline: .09em;
+        transform: translateY(-.1em);
+    }
+        .chat-log .reaction .emoji {
+            text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+        }
     
 .page-head {
     box-sizing: border-box;

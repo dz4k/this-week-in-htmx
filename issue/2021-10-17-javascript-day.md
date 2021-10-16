@@ -21,11 +21,11 @@ Authors:
 ## Ben Pate committed to refactoring SSE & WebSocket support into plugins
 
   {{#> chatlog time='20211013T1144+03' url="725789699527933952/725789747212976259/897947897377742888" }}
-  @1cg: pull web sockets and server sent events out into extensions [👍5 👎1]
+  @1cg: pull web sockets and server sent events out into extensions [👍5][👎1]
   @benpate: Just say "go" and I'll volunteer to do it 
   @1cg: go  
   @1cg: 1.7 we will pull them out
-  @benpate: F. What have I done?? [🇫1 😂1]
+  @benpate: F. What have I done?? [🇫1][😂1]
   {{/ chatlog}}
 
 ## Carson explains how to make third-party components work with htmx
