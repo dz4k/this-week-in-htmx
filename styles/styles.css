@@ -33,6 +33,19 @@ h2 {
     margin-top: 3em;
 }
 
+pre {
+    max-width: calc(100% + (2 * var(--page-padding)));
+    overflow-x: auto;
+	scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+	-moz-tab-size: 4ch;
+	-o-tab-size: 4ch;
+	tab-size: 4ch;
+	margin-inline: calc(-1 * var(--page-padding));
+	padding-inline: calc(1 * var(--page-padding));
+}
+
+
 dl {
     --placeholder: none
 }
