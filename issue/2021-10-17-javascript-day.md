@@ -21,18 +21,18 @@ curious? We'll have to see.
 ## Ben Pate committed to refactoring SSE & WebSocket support into plugins
 
 {{#> chatlog time='20211013T1144+03' url="725789699527933952/725789747212976259/897947897377742888" }}
-@1cg: pull web sockets and server sent events out into extensions [👍5][👎1]
-@benpate: Just say "go" and I'll volunteer to do it 
-@1cg: go  
-@1cg: 1.7 we will pull them out
-@benpate: F. What have I done?? [🇫1][😂1]
+1cg: pull web sockets and server sent events out into extensions [👍5][👎1]
+benpate: Just say "go" and I'll volunteer to do it 
+1cg: go  
+1cg: 1.7 we will pull them out
+benpate: F. What have I done?? [🇫1][😂1]
 {{/ chatlog}}
 
 ## Carson explains how to make third-party components work with htmx
 
 {{#> chatlog time='20211014T1301+03' url="725789699527933952/725789747212976259/897967236420096000"}}
-@1cg: Ah, OK.  So, here's the deal
-@1cg: and I need to document this, sorry
+1cg: Ah, OK.  So, here's the deal
+1cg: and I need to document this, sorry
 {{/ chatlog}}
 
 When using a JavaScript library that makes a lot of modifications to the DOM,
@@ -43,7 +43,7 @@ In summary, initialize your libraries in `htmx.onLoad()`, and _uninitialize_
 them on the `htmx:beforeHistorySave` event.
 
 {{#> chatlog time='20210114T1344+03' url="725789699527933952/725789747212976259/897978077232107560"}}
-@Fubarrr: [...] If you want your back button to behave as you expect it to… 
+Fubarrr: [...] If you want your back button to behave as you expect it to… 
   this pattern of “undoing” all the DOM manipulation your JS widgets did 
   initially on page/fragment load, is critical. [...]
 {{/ chatlog}}
@@ -54,11 +54,12 @@ them on the `htmx:beforeHistorySave` event.
 ## Thomas Güttler reminded us about the htmx tag on StackOverflow
 
 {{#> chatlog time='20211012T1041+03' url="725789699527933952/725789747212976259/897569632708345927"}}
-@guettli: I think up to now I am the only one who tries to support new htmx
-users which  ask a question on Stackoverflow. It would be very nice, if some 
-more users could subscribe to the tag htmx, so that you receive an email if a
-new htmx question got asked: <https://stackexchange.com/filters/409974/htmx>
-Of course I will up-vote your answers 🙂
+guettli: I think up to now I am the only one who tries to support new htmx
+  users which  ask a question on Stackoverflow. It would be very nice, if some 
+  more users could subscribe to the tag htmx, so that you receive an email if a
+  new htmx question got asked: <https://stackexchange.com/filters/409974/htmx>
+  
+  Of course I will up-vote your answers 🙂
 {{/ chatlog}}
 
 You heard him, folks.
