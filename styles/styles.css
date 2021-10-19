@@ -91,7 +91,7 @@ dl {
             color: currentColor;
             padding: 0;
         }
-        .site-header .menu-button:is(:hover. :focus) {
+        .site-header .menu-button:is(:hover, :focus) {
             text-decoration: underline;
         }
 
