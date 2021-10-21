@@ -71,16 +71,18 @@ module.exports = function (eleventyConfig) {
         return url.href + (dotdotdot ? '…' : '')
     })
 
-    eleventyConfig.addPairedShortcode('fig', (body, caption, link) =>
+    eleventyConfig.addPairedShortcode('fig', (/** @type {string} */body, caption, link) =>
         `
 
-<figure><figcaption>${typeof link === 'string'
-            ? `<a href="${link}">${markdownLibrary.renderInline(caption)}</a>`
-            : markdownLibrary.renderInline(caption)
-        }</figcaption>
+<figure class="fig">
 
 ${body}
 
+<figcaption>${
+    typeof link === 'string'
+        ? `<a href="${link}">${markdownLibrary.renderInline(caption)}</a>`
+        : markdownLibrary.renderInline(caption)
+}</figcaption>
 </figure>
 
 `) // `

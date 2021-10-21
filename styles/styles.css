@@ -57,6 +57,38 @@ dl {
         font-weight: bold;
     }
 
+p > img:only-child {
+    border: 1px solid #888;
+}
+
+.fig {
+    margin-inline: 0;
+}
+    .fig figcaption {
+        color: #444;
+    }
+
+    .fig > * {
+        margin: 0;
+    }
+
+    @media (min-width: calc(5vw * 2 + 70ch + 1em + 20ch)) {
+        .fig {
+            display: flex;
+            flex-flow: row;
+            vertical-align: top;
+            gap: 1em;
+        }
+        .fig figcaption {
+            display: block;
+            max-width: 20ch;
+        }
+
+        .fig > :not(figcaption) {
+            width: 70ch;
+        }
+    }
+
 .site-header {
     position: absolute;
     top: 0; left: 0; right: 0;
@@ -111,7 +143,7 @@ dl {
         margin-inline: var(--page-padding);
     }
 
-    .thisweek-issue .e-content :is(p, figure) {
+    .thisweek-issue .e-content :is(p, .chatlog) {
         max-width: 70ch;
     }
 
