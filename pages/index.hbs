@@ -14,7 +14,7 @@ permalink: /
     </div>
 
     <ol reversed role="list" class="-container">
-    {{#collections.issue}}
+    {{#each (reverse collections.issue)}}
         <li>
             <article class="h-entry thisweek-issue issueheader">
                 <h2>
@@ -23,6 +23,6 @@ permalink: /
                 {{> byline data}}
             </article>
         </li>
-    {{/collections.issue}}
+    {{/each}}
     </ol>
 </div>
