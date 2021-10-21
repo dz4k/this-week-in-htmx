@@ -143,7 +143,7 @@ p > img:only-child {
         margin-inline: var(--page-padding);
     }
 
-    .thisweek-issue .e-content :is(p, .chatlog) {
+    .thisweek-issue .e-content :is(p, .chat-log) {
         max-width: 70ch;
     }
 
