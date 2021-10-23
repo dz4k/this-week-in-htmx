@@ -1,4 +1,5 @@
 
+
 body {
     --page-padding: 5vw;
 
@@ -45,6 +46,11 @@ pre {
 	padding-inline: calc(1 * var(--page-padding));
 }
 
+blockquote {
+	margin-inline-start: 1em;
+	padding-inline-start: 1em;
+	border-inline-start: .2em solid #bbb;
+}
 
 dl {
     --placeholder: none
