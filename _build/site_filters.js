@@ -16,9 +16,11 @@ module.exports = function (eleventyConfig) {
 
         blocks.forEach((block, i) => {
             blocks[i] = block
-                .replace(/^((?:[^:]|\\:)*):/m, ' <b>$1</b>')
-                .replace(/^--- (.*) ---/m, ' <i class="stage-direction">$1</i>')
-                .replace(/\[(\p{So})(\d+)\]/gu, 
+                .replace(/^((?:[^:]|\\:)+):/m, ' <b>$1</b>') // Author
+                .replace(/^--- (.*) ---/m, ' <i class="stage-direction">$1</i>') // Actions
+                .replace(/\[Re\. ((?:[^:]|\\:)+): ([^\]]+)\]/, // Reply to
+                    '<span class="replyto">&rarrhk; Re. <b>$1</b> <span>$2</span></span>')
+                .replace(/\[(\p{So})(\d+)\]/gu, // Reactions 
                     '<span class="reaction"><span class="emoji">$1</span> $2</span>')
         })
 

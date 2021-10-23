@@ -203,6 +203,18 @@ p > img:only-child {
         margin-inline-end: 1ch;
     }
 
+    .chat-log .replyto {
+        font-size: .9em;
+    }
+        .chat-log .replyto > b {
+            font-weight: normal;
+        }
+
+        .chat-log .replyto > span {
+            color: #5a5a5a;
+            font-style: italic;
+        }
+
     .chat-log .reaction {
         display: inline-block;
         font-size: .9em;
