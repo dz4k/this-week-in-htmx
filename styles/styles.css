@@ -132,6 +132,13 @@ p > img:only-child {
     color: #555;
 }
 
+.issue-list {
+	/**/
+}
+	.issue-list * + * {
+		margin-top: 1em;
+	}
+
 .thisweek-issue {
     --placeholder: ;
 }
