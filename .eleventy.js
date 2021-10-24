@@ -1,4 +1,6 @@
 
+const markdownIt = require('markdown-it')
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias('base',  'layout/base.hbs')
     eleventyConfig.addLayoutAlias('issue', 'layout/issue.hbs')
@@ -19,6 +21,12 @@ module.exports = function (eleventyConfig) {
             require('prism-hyperscript')(Prism)
         }
     })
+
+	const md = markdownIt({
+		html: true,
+		typographer: true,
+	})
+    eleventyConfig.setLibrary('md', md)
 
     return {
         markdownTemplateEngine: 'hbs'
