@@ -14,7 +14,9 @@ title: This Week in HTMX
     <script src="/vendor/htmx.org/htmx.js" defer></script>
     <script src="/scripts/script.js" type="module"></script>
 
-    <meta property="og:title" content="{{ title }}">
+    <meta name="description" content="{{description}}">
+
+    <meta property="og:title" content="{{title}}">
     {{#if Issue}}
         <meta property="og:type" content="article">
     {{/if}}

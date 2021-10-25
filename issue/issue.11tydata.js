@@ -7,6 +7,7 @@ module.exports = {
         authors: data => data.Authors.map(author => {
             const sp = author.split(/[<>]/g)
             return { name: sp[0].trim(), url: sp[1] }
-        })
+        }),
+        description: data => data.Description,
     }
 }
