@@ -11,10 +11,12 @@ title: This Week in HTMX
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/syntax-theme.css">
     <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
-    <script src="/vendor/htmx.org/htmx.js"></script>
+    <script src="/vendor/htmx.org/htmx.js" defer></script>
     <script src="/scripts/script.js" type="module"></script>
 
-    <meta property="og:title" content="{{ title }}">
+    <meta name="description" content="{{description}}">
+
+    <meta property="og:title" content="{{title}}">
     {{#if Issue}}
         <meta property="og:type" content="article">
     {{/if}}
