@@ -230,6 +230,21 @@ p > img:only-child {
             text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
         }
     
+    .chat-log .stage-direction {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        
+        font-size: .8em;
+        font-weight: bold;
+        font-style: normal;
+        color: #585858;
+
+        border-top: 1px solid #585858;
+        margin: .5em 0;
+        line-height: 1.1;
+    }
+    
 .page-head {
     box-sizing: border-box;
     padding-inline: var(--page-padding);
