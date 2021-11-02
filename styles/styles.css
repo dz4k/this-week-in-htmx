@@ -95,6 +95,21 @@ p > img:only-child {
         }
     }
 
+.skip-link {
+    display: inline-block;
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0;
+    pointer-events: none;
+    padding: 1em;
+    background: black;
+    transition: opacity 100ms ease-in-out;
+}
+    .skip-link:focus {
+        opacity: 1;
+        pointer-events: all;
+    }
+
 .site-header {
     position: absolute;
     top: 0; left: 0; right: 0;

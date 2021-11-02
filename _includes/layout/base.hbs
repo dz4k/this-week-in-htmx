@@ -31,6 +31,7 @@ title: This Week in HTMX
 <body hx-boost="true">
     <header hx-preserve="true" class="site-header" id="site-header">
         <nav>
+            <a href="#main" class="skip-link">Skip navigation</a>
             <button type="button" class="menu-button">
                 <span role="img" aria-label="Expand menu">&#x2630;</span>
             </button>
@@ -49,7 +50,7 @@ title: This Week in HTMX
             </ul>
         </nav>
     </header>
-    <main hx-history-elt>
+    <main id="main" hx-history-elt>
         {{{ content }}}
     </main>
 
