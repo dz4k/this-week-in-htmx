@@ -29,13 +29,13 @@ title: This Week in HTMX
     {{/if}}
 </head>
 <body hx-boost="true">
-    <header hx-preserve="true" class="site-header" id="site-header">
+    <header hx-preserve="true" class="site-header" id="site-header" data-overflow-nav>
         <nav>
             <a href="#main" class="skip-link">Skip navigation</a>
             <button type="button" class="menu-button">
                 <span role="img" aria-label="Expand menu">&#x2630;</span>
             </button>
-            <ul role="list">
+            <ul role="list" data-nav-list>
                 {{#each Navigation}}
                     <li><a href="{{.}}">{{{@key}}}</a></li>
                 {{/each}}
