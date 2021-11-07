@@ -131,6 +131,7 @@ p > img:only-child {
         }
             .site-header ul li + li {
                 margin-inline-start: 1em;
+                margin-block-end: 1em;
             }
 
         .site-header a:not(:hover, :focus) {
