@@ -200,24 +200,17 @@ p > img:only-child {
     
     .chat-log > blockquote {
         margin: 0;
-        padding-inline: 1ch;
+        padding-inline: 2ch 1ch;
         background: #eee;
         border: 1px solid #ccc;
     }        
     .chat-log > blockquote * {
         margin-block: 0;
     }
-
-    .chat-log > blockquote p {
-        text-indent: -.5em;
-        margin-inline-start: .5em;
-    }
-        .chat-log > blockquote p * {
-            text-indent: 0; /* why is this an inherited property */
-        }
     
     .chat-log > blockquote > p > b {
-        margin-inline-end: 1ch;
+    	display: inline-block;
+        transform: translateX(-1ch);
     }
 
     .chat-log .replyto {
