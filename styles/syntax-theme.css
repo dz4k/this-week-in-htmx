@@ -8,7 +8,7 @@ pre[class*="language-"] {
     word-break: normal;
 
     font-family: 'Source Code Pro', 'Ubuntu Mono', 'Consolas', monospace;
-    font-size: .9rem;
+    font-size: .9em;
     font-weight: 500;
 
     -moz-tab-size: 2;

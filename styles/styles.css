@@ -1,8 +1,6 @@
 
 
 body {
-    --page-padding: 15vw;
-
     padding: 0;
     margin: 0;
 
@@ -21,6 +19,10 @@ pre, code, kbd, samp {
 
 a {
     color: currentColor;
+    text-decoration: underline 1px #888;
+}
+a:hover {
+    text-decoration: underline 2px #888;
 }
 
 h1 {
@@ -91,6 +93,26 @@ p > img:only-child {
         }
     }
 
+.homepage-header {
+    display: grid;
+    grid-template-columns: minmax(15ch, 2fr) 3fr;
+    align-items: center;
+    gap: 1em;
+}
+    .homepage-header h1 {
+        grid-column: 1;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .homepage-header p {
+        grid-column: 2;
+        text-align: right;
+        max-width: 40ch;
+        margin-left: auto;
+        font-style: italic;
+    }
+
 .site-footer {
     margin-block-start: 3em;
     padding-inline: var(--page-padding);
@@ -101,25 +123,14 @@ p > img:only-child {
 	text-align: center;
 }
 	.issue-list * + * {
-		margin-top: 1em;
+		margin-top: 2em;
 	}
-
-    .issue-list a {
-        text-decoration: underline 1px #888;
-    }
-    .issue-list a:hover {
-        text-decoration: underline 2px #888;
-    }
 
 .thisweek-issue {
     --placeholder: ;
 }
     .issueheader > * {
         margin-block: 0;
-    }
-    
-    .thisweek-issue .e-content {
-        margin-inline: var(--page-padding);
     }
 
     .thisweek-issue .e-content :is(p, .chat-log) {
@@ -150,7 +161,7 @@ p > img:only-child {
     .chat-log > blockquote {
         margin: 0;
         padding-inline: 2ch 1ch;
-        background: #f4f4f4;
+        background: #f5f5f5;
         border: 1px solid #ccc;
     }        
     .chat-log > blockquote * {
@@ -200,12 +211,20 @@ p > img:only-child {
         color: #585858;
 
         border-top: 1px solid #585858;
-        margin: .5em 0;
+        margin: .5em 0 .5em -1ch;
         line-height: 1.1;
     }
-    
-.page-head {
-    box-sizing: border-box;
-    padding-inline: var(--page-padding);
-    padding-block: 1em;z
+
+.youtube-embed {
+    margin-inline: 0;
+}
+    .youtube-embed > iframe {
+        max-width: 70ch;
+        aspect-ratio: 16 / 9;
+    }
+
+.-container {
+    max-width: clamp(70ch, 80vw, 100%);
+    margin-inline: auto;
+    padding: .5ch;
 }
