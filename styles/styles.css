@@ -1,7 +1,7 @@
 
 
 body {
-    --page-padding: 5vw;
+    --page-padding: 15vw;
 
     padding: 0;
     margin: 0;
@@ -26,7 +26,6 @@ a {
 h1 {
     font-size: 2em;
     margin-top: 0;
-    font-weight: normal;
 }
 
 h2 {
@@ -35,15 +34,12 @@ h2 {
 }
 
 pre {
-    max-width: calc(100% + (2 * var(--page-padding)));
     overflow-x: auto;
 	scrollbar-width: thin;
     scrollbar-color: #888 transparent;
 	-moz-tab-size: 4ch;
 	-o-tab-size: 4ch;
 	tab-size: 4ch;
-	margin-inline: calc(-1 * var(--page-padding));
-	padding-inline: calc(1 * var(--page-padding));
 }
 
 blockquote {
@@ -95,72 +91,25 @@ p > img:only-child {
         }
     }
 
-.skip-link {
-    display: inline-block;
-    position: absolute;
-    left: 0; top: 0;
-    opacity: 0;
-    pointer-events: none;
-    padding: 1em;
-    background: black;
-    transition: opacity 100ms ease-in-out;
-}
-    .skip-link:focus {
-        opacity: 1;
-        pointer-events: all;
-    }
-
-.site-header {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    padding-inline: var(--page-padding);
-    overflow: hidden;
-    z-index: 10;
-    max-height: 3.9em;
-    color: white;
-}
-    .site-header nav {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: baseline;
-    }
-        .site-header ul {
-            display: flex;
-            flex-flow: row wrap;
-            list-style: none;
-        }
-            .site-header ul li + li {
-                margin-inline-start: 1em;
-                margin-block-end: 1em;
-            }
-
-        .site-header a:not(:hover, :focus) {
-            text-decoration: none;
-        }
-
-        .site-header .menu-button {
-            font-size: 1em;
-            background: none;
-            border: none;
-            color: currentColor;
-            padding: 0;
-            margin-inline-end: 1em;
-        }
-        .site-header .menu-button:is(:hover, :focus) {
-            text-decoration: underline;
-        }
-
 .site-footer {
+    margin-block-start: 3em;
     padding-inline: var(--page-padding);
     color: #555;
 }
 
 .issue-list {
-	/**/
+	text-align: center;
 }
 	.issue-list * + * {
 		margin-top: 1em;
 	}
+
+    .issue-list a {
+        text-decoration: underline 1px #888;
+    }
+    .issue-list a:hover {
+        text-decoration: underline 2px #888;
+    }
 
 .thisweek-issue {
     --placeholder: ;
@@ -201,7 +150,7 @@ p > img:only-child {
     .chat-log > blockquote {
         margin: 0;
         padding-inline: 2ch 1ch;
-        background: #eee;
+        background: #f4f4f4;
         border: 1px solid #ccc;
     }        
     .chat-log > blockquote * {
@@ -258,15 +207,5 @@ p > img:only-child {
 .page-head {
     box-sizing: border-box;
     padding-inline: var(--page-padding);
-    padding-top: 3em;
-    padding-bottom: 1em;
-    min-height: 18em;
-    background: 
-        linear-gradient(120deg, #4b9, transparent 40em),
-        linear-gradient(120deg, #12f, #01a);
-    color: white;
-}
-
-.-container {
-    padding-inline: var(--page-padding);
+    padding-block: 1em;z
 }

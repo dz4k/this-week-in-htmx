@@ -11,7 +11,6 @@ title: This Week in HTMX
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/syntax-theme.css">
     <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
-    <script src="/vendor/htmx.org/htmx.js" defer></script>
     <script src="/scripts/script.js" type="module"></script>
 
     <meta name="description" content="{{description}}">
@@ -29,31 +28,7 @@ title: This Week in HTMX
     {{/if}}
 </head>
 <body hx-boost="true">
-    <header hx-preserve="true" class="site-header" id="site-header" data-overflow-nav>
-        <nav>
-            <a href="#main" class="skip-link">Skip navigation</a>
-            <button type="button" class="menu-button">
-                <span role="img" aria-label="Expand menu">&#x2630;</span>
-            </button>
-            <ul role="list" data-nav-list>
-                {{#each Navigation}}
-                    <li><a href="{{.}}">{{{@key}}}</a></li>
-                {{/each}}
-                <li><a href="/">Home</a></li>
-                <li><a href="/contribute/">Contribute</a></li>
-                <li><a href="/support/">Support</a></li>
-                <li><a href="/feed/">Feed</a></li>
-                <li><a href="https://htmx.org">HTMX{{>external}}</a></li>
-                <li><a href="https://hyperscript.org">_hyperscript{{>external}}</a></li>
-                <li><a href="https://github.com/dz4k/this-week-in-htmx">GitHub{{>external}}</a></li>
-                <li><a href="https://htmx.org/discord">Discord{{>external}}</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main" hx-history-elt>
-        {{{ content }}}
-    </main>
-
+    {{{ content }}}
     <style>
         .site-header a[href="{{page.url}}"] {
             text-decoration: underline;
@@ -61,6 +36,17 @@ title: This Week in HTMX
     </style>
 
     <footer class="site-footer">
+        <nav>
+            <a href="/">This Week in HTMX</a> |
+            <a href="/contribute/">Contribute</a> |
+            <a href="/support/">Support</a> |
+            <a href="/feed/">Feed</a> |
+            <a href="https://htmx.org">HTMX{{>external}}</a> |
+            <a href="https://hyperscript.org">_hyperscript{{>external}}</a> |
+            <a href="https://github.com/dz4k/this-week-in-htmx">GitHub{{>external}}</a> |
+            <a href="https://htmx.org/discord">Discord{{>external}}</a>
+        </nav>
+
         <p><small>&copy; 2021 This Week on HTMX Contributors</small></p>
     </footer>
 </body>
