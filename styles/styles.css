@@ -120,8 +120,12 @@ p > img:only-child {
 }
 
 .issue-list {
-	text-align: center;
 }
+    .issue-list h2 {
+        font-size: 1.8em;
+        font-weight: normal;
+    }
+
 	.issue-list * + * {
 		margin-top: 2em;
 	}
