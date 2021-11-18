@@ -6,6 +6,9 @@ body {
 
     font-family: "Noto Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
     line-height: 1.6;
+
+    background: #10104f;
+    color:white;
 }
 
 :where(:is(ul,ol)[role=list]) {
@@ -116,7 +119,7 @@ p > img:only-child {
 .site-footer {
     margin-block-start: 3em;
     padding-inline: var(--page-padding);
-    color: #555;
+    color: #bbb;
 }
 
 .issue-list {
@@ -153,20 +156,20 @@ p > img:only-child {
         text-align: end;
         font-size: .9em;
         line-height: 1.1em;
-        color: #555;
+        color: #bbb;
     }
     .chat-log > figcaption a {
         text-decoration: none;
     }
     .chat-log > figcaption a:hover {
-        color: black;
+        color: white;
     }
     
     .chat-log > blockquote {
         margin: 0;
         padding-inline: 2ch 1ch;
-        background: #f5f5f5;
-        border: 1px solid #ccc;
+        background: #353535;
+        border: 1px solid #111;
     }        
     .chat-log > blockquote * {
         margin-block: 0;
@@ -185,7 +188,7 @@ p > img:only-child {
         }
 
         .chat-log .replyto > span {
-            color: #5a5a5a;
+            color: #aaa;
             font-style: italic;
         }
 
@@ -193,8 +196,8 @@ p > img:only-child {
         display: inline-block;
         font-size: .9em;
         line-height: 1.4em;
-        background-color: #dadada;
-        border: 1px solid #aaa;
+        background-color: #222;
+        border: 1px solid #555;
         border-radius: 4px;
         padding-inline: .3em;
         margin-inline: .09em;
@@ -212,9 +215,9 @@ p > img:only-child {
         font-size: .8em;
         font-weight: bold;
         font-style: normal;
-        color: #585858;
+        color: #afafaf;
 
-        border-top: 1px solid #585858;
+        border-top: 1px solid #afafaf;
         margin: .5em 0 .5em -1ch;
         line-height: 1.1;
     }

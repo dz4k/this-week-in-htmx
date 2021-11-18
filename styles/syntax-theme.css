@@ -22,14 +22,8 @@ pre[class*="language-"] {
 }
 
 code {
-    color: #595959;
-    filter: brightness(0.8);
-}
-
-@media (prefers-color-scheme: dark) {
-    code {
-        filter: brightness(1.96);
-    }
+    color: #818181;
+    filter: brightness(1.96);
 }
 
 .token.comment,
@@ -95,9 +89,4 @@ code {
 
 .token.hyperscript {
     color: var(--color-foreground);
-}
-
-.token.comment {
-    font-family: var(--font-main);
-    letter-spacing: .04em;
 }
