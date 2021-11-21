@@ -31,4 +31,20 @@ module.exports = function (eleventyConfig) {
         if (url.startsWith('http')) return url
         return 'https://discordapp.com/channels/' + url
     })
+
+    eleventyConfig.addFilter('cite', (a1, a2) => {
+        console.log(typeof a2 === 'string'?a2:a1)
+        const url = new URL(typeof a2 === 'string' ? a2 : a1)
+        let title = typeof a2 === 'string' ? a1 : undefined
+        
+        if (title === undefined) {
+            if (url.hostname === 'twitter.com') {
+                title = '@' + url.pathname.split('/')[1]
+            } else {
+                title = url
+            }
+        }
+
+        return `<footer>&mdash; <a href="${url}">${title}</a></footer>`
+    })
 }
