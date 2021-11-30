@@ -24,9 +24,11 @@ a {
     color: currentColor;
     text-decoration: underline 1px #888;
 }
-a:hover {
-    text-decoration: underline 2px #888;
-}
+    a:hover {
+        text-decoration-line: underline !important;
+        text-decoration-thickness: 2px;
+        text-decoration-color: #888;
+    }
 
 h1 {
     font-size: 2em;
@@ -123,6 +125,7 @@ p > img:only-child {
 }
 
 .issue-list {
+    --empty-ruleset: true;
 }
     .issue-list h2 {
         font-size: 1.8em;
@@ -134,50 +137,88 @@ p > img:only-child {
 	}
 
 .thisweek-issue {
-    --placeholder: ;
+    --empty-ruleset: ;
 }
     .issueheader > * {
         margin-block: 0;
     }
 
-    .thisweek-issue .e-content :is(p, .chat-log) {
+    .thisweek-issue .e-content :is(p, .social-embed) {
         max-width: 70ch;
     }
 
     .thisweek-issue .e-content > :first-child {
         margin-top: 1em;
     }
-    
-.chat-log {
+
+.social-embed {
     margin-inline: 0;
-    margin-bottom: -.5em; /* compensate for datetime at the right */
 }
-    .chat-log > figcaption {
-        text-align: end;
+    .social-embed > figcaption {
+        /* text-align: end; */
         font-size: .9em;
         line-height: 1.1em;
         color: #bbb;
     }
-    .chat-log > figcaption a {
+
+    .social-embed > figcaption a {
         text-decoration: none;
     }
-    .chat-log > figcaption a:hover {
+
+    .social-embed > figcaption a:hover {
         color: white;
     }
-    
-    .chat-log > blockquote {
-        margin: 0;
-        padding-inline: 2ch 1ch;
-        background: #353535;
-        border: 1px solid #111;
-    }        
-    .chat-log > blockquote * {
-        margin-block: 0;
+
+    .social-embed .silo {
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
     
-    .chat-log > blockquote > p > b {
-    	display: inline-block;
+    .social-embed > blockquote {
+        margin: 0;
+        padding-inline: 2ch 1ch;
+        background: var(--social-bg, #353535);
+        border: 2px solid var(--social-accent, #9a9a9a);
+    }
+        .social-embed > blockquote > :last-child {
+            margin-bottom: 0;
+        }
+
+    .social-embed .author {
+        display: inline-block;
         transform: translateX(-1ch);
+    }
+
+    .social-embed cite {
+        font-style: normal;
+    }
+        .social-embed cite a {
+            text-decoration-line: none;
+            text-decoration-color: currentColor;
+        }
+
+    .social-embed.-discord {
+        --social-bg: hsl(220, 8%, 23%);
+        --social-accent: hsl(235, 87%, 65%);
+    }
+
+    .social-embed.-twitter {
+        --social-bg: hsl(210, 34%, 13%);
+        --social-accent: hsl(204, 88%, 53%);
+    }
+        .social-embed.-twitter .handle {
+            color: #afafaf;
+        }
+
+        .social-embed.-twitter > blockquote > p:first-of-type {
+            margin-top: 0;
+        }
+
+.chat-log {
+    --empty-ruleset: true;
+}
+    .chat-log > blockquote * {
+        margin-block: 0;
     }
 
     .chat-log .replyto {
