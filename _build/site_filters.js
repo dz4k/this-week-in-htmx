@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
 
         blocks.forEach((block, i) => {
             blocks[i] = block
-                .replace(/^([^\-](?:[^:]|\\:)*):/m, ' <b>$1</b>') // Author
+                .replace(/^([^\-](?:[^:]|\\:)*):/m, ' <b class="author">$1</b>') // Author
                 .replace(/^--- (.*) ---/m, ' <i class="stage-direction">$1</i>') // Actions
                 .replace(/\[Re\. ((?:[^:]|\\:)+): ([^\]]+)\]/, // Reply to
                     '<span class="replyto">&rarrhk; Re. <b>$1</b> <span>$2</span></span>')
@@ -27,9 +27,26 @@ module.exports = function (eleventyConfig) {
         return blocks.join('\n\n')
     })
     
-    eleventyConfig.addFilter('discordUrl', url => {
-        if (url.startsWith('http')) return url
-        return 'https://discordapp.com/channels/' + url
+    eleventyConfig.addFilter('discordUrl', href => {
+        if (href.startsWith('http')) return href
+        return 'https://discordapp.com/channels/' + href
+    })
+    
+    let twitterUrl
+    eleventyConfig.addFilter('twitterUrl', twitterUrl = href => {
+        if (href.startsWith('http')) return href
+        return 'https://twitter.com/' + href.replace('/', '/status/')
+    })
+
+    eleventyConfig.addFilter('twitterProfile', href => {
+        const url = new URL(twitterUrl(href))
+        url.pathname = '/' + url.pathname.split('/')[1]
+        return url
+    })
+
+    eleventyConfig.addFilter('twitterHandle', href => {
+        const url = new URL(twitterUrl(href))
+        return '@' + url.pathname.split('/')[1]
     })
 
     eleventyConfig.addFilter('cite', (a1, a2) => {

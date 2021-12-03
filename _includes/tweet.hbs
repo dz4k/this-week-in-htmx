@@ -1,0 +1,15 @@
+
+<figure class="social-embed -twitter">
+<figcaption>
+    <span class="silo">Twitter</span> &middot;
+    <a href="{{ twitterUrl url }}"><time 
+        datetime="{{ isodatetime time }}">{{ datetime time }}</time></a>
+</figcaption>
+<blockquote>
+    <cite class="author"><a href="{{ twitterProfile url }}"
+        ><b>{{ author }}</b> <span class="handle">{{ twitterHandle url }}</span></a></cite>
+
+{{ @partial-block }}
+
+</blockquote>
+</figure>
