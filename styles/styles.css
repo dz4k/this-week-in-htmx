@@ -7,7 +7,7 @@ body {
     font-family: "Noto Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
     line-height: 1.6;
 
-    background: #10104f;
+    background: #010125;
     color:white;
 }
 
@@ -144,9 +144,12 @@ p > img:only-child {
 .thisweek-issue {
     --empty-ruleset: ;
 }
-    .issueheader > * {
-        margin-block: 0;
+    .issueheader {
+        margin-block: 2em;
     }
+        .issueheader > * {
+            margin-block: 0;
+        }
 
     .thisweek-issue .e-content :is(p, .social-embed) {
         max-width: 70ch;
@@ -184,6 +187,7 @@ p > img:only-child {
         padding-inline: 2ch 1ch;
         background: var(--social-bg, #353535);
         border: 2px solid var(--social-accent, #9a9a9a);
+        border-radius: .3em;
     }
         .social-embed > blockquote > :last-child {
             margin-bottom: 0;
