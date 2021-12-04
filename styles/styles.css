@@ -40,6 +40,11 @@ h2 {
     margin-top: 3em;
 }
 
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
 pre {
     overflow-x: auto;
 	scrollbar-width: thin;
