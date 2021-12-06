@@ -163,18 +163,20 @@ p > img:only-child {
     margin-inline: 0;
 }
     .social-embed > figcaption {
-        /* text-align: end; */
-        font-size: .9em;
-        line-height: 1.1em;
-        color: #bbb;
+        text-align: end;
+        font-weight: bold;
+        font-size: .8em;
+        line-height: 1.4em;
+        color: rgb(173, 173, 173);
+        color: var(--social-accent);
+    }
+
+    .social-embed > figcaption:hover {
+        color: white;
     }
 
     .social-embed > figcaption a {
         text-decoration: none;
-    }
-
-    .social-embed > figcaption a:hover {
-        color: white;
     }
 
     .social-embed .silo {
