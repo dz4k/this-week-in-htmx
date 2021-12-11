@@ -232,6 +232,10 @@ p > img:only-child {
         margin-block: 0;
     }
 
+    .chat-log img {
+        vertical-align: text-top;
+    }
+
     .chat-log .replyto {
         font-size: .9em;
     }
@@ -281,6 +285,10 @@ p > img:only-child {
         max-width: 70ch;
         aspect-ratio: 16 / 9;
     }
+
+.emoji {
+    font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol
+}
 
 .-container {
     max-width: clamp(70ch, 80vw, 100%);
