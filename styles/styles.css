@@ -77,9 +77,13 @@ p > img:only-child {
 
 .fig {
     margin-inline: 0;
+    padding-inline-start: 2ch;
+    border-inline-start: 1px solid #aaa;
 }
     .fig figcaption {
-        color: #444;
+        color: #aaa;
+        font-size: .9em;
+        letter-spacing: .06em;
     }
 
     .fig > * {
@@ -99,7 +103,7 @@ p > img:only-child {
         }
 
         .fig > :not(figcaption) {
-            width: 70ch;
+            width: 68ch;
         }
     }
 
