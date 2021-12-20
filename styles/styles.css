@@ -164,10 +164,11 @@ p > img:only-child {
     }
 
 .blogs-corner {
-	border: 2px solid #888;
-	border-radius: 4px;
-	background: #0fa2;
-	padding: 0 1em;
+    padding: 0 1em;
+    border: 1px solid #010125;
+    border-inline-start: 2px solid #aaa;
+    border-radius: 4px;
+    background: linear-gradient(to right, #0fa2, transparent 15em);
 }
 	.blogs-corner > summary {
 		margin-block: 1em;
