@@ -163,6 +163,19 @@ p > img:only-child {
         margin-top: 1em;
     }
 
+.blogs-corner {
+	border: 2px solid #888;
+	border-radius: 4px;
+	background: #0fa2;
+	padding: 0 1em;
+}
+	.blogs-corner > summary {
+		margin-block: 1em;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		color: #ddd;
+	}
+
 .social-embed {
     margin-inline: 0;
 }
