@@ -55,12 +55,12 @@ blockquote {
 	margin-inline-start: 1em;
 }
 
-blockquote:not([class]) > :first-child:before {
+blockquote:not([class]):not(.-resetblockquote *) > :first-child:before {
 	content: '“ ';
 	font-weight: bold;
 }
 
-blockquote:not([class]) > p:last-of-type:after {
+blockquote:not([class]):not(.-resetblockquote *) > p:last-of-type:after {
 	content: ' ”';
 	font-weight: bold;
 }
@@ -144,7 +144,7 @@ p > img:only-child {
             margin-block: 0;
         }
 
-    .thisweek-issue .e-content :is(p, .social-embed) {
+    .thisweek-issue .e-content :is(p, blockquote:not([class]), .social-embed) {
         max-width: 70ch;
     }
 
