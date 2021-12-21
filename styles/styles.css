@@ -53,6 +53,7 @@ pre {
 
 blockquote {
 	margin-inline-start: 1em;
+	max-width: 80ch;
 }
 
 blockquote:not([class]):not(.-resetblockquote *) > :first-child:before {
