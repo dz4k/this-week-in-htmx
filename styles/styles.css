@@ -185,7 +185,7 @@ p > img:only-child {
         padding-inline: 2ch 1ch;
         border: 2px solid var(--social-accent, #9a9a9a);
         border-radius: .3em;
-        background: linear-gradient(to right, var(--social-accent), transparent 15em)
+        background: #1a1a20;
     }
         .social-embed > blockquote > :last-child {
             margin-bottom: 0;
