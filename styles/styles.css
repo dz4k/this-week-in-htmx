@@ -51,18 +51,36 @@ pre {
 	tab-size: 4ch;
 }
 
-blockquote {
-	margin-inline: 0;
-	padding-inline-start: 1em;
+blockquote:not([class]) {
 	max-width: 80ch;
-	border-inline-start: 1px solid #aaa;
-	box-sizing: border-box;
+	font-size: 1.05em;
+	line-height: calc(1.6em / 1.05);
+	font-style: italic;
+	color: #fffc;
 }
 
-blockquote > footer {
-	text-align: right;
-	margin-inline-end: 2em;
+blockquote:not([class]):before {
+	content: '\1f676';
+	font-style: normal;
+	color: #fff8;
+	float: inline-start;
+	margin-inline-start: -1.5ch;
+	margin-block-start: .1em;
+	font-size: 2.4em;
+	line-height: .9;
+	display: block;
 }
+
+	blockquote:not([class]) > footer {
+		text-align: right;
+		margin-inline-end: 2em;
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	blockquote:not([class]) :is(i, cite, em, var, address, dfn) {
+		font-style: normal;
+	}
 
 dl {
     --placeholder: none
