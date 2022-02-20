@@ -110,6 +110,14 @@ video {
     background: black;
 }
 
+aside {
+	background: #002035;
+	border-radius:4px;
+	padding: 0 1em;
+	max-width: min(100%, 70ch);
+	display: flow-root;
+}
+
 .fig {
     margin-inline: 0;
     padding-inline-start: 2ch;
