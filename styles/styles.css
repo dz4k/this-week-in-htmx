@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
 
-    font-family: "Noto Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    font-family: -apple-system, system-ui, sans-serif;
     line-height: 1.6;
 
     background: #010125;
