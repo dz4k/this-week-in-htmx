@@ -50,7 +50,6 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addFilter('cite', (a1, a2) => {
-        console.log(typeof a2 === 'string'?a2:a1)
         const url = new URL(typeof a2 === 'string' ? a2 : a1)
         let title = typeof a2 === 'string' ? a1 : undefined
         
