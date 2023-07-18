@@ -17,12 +17,9 @@ description: a weekly summary of the goings-on in the htmx community
     <ol reversed role="list" class="issue-list -container">
     {{#each (reverse collections.issue)}}
         <li>
-            <article class="h-entry thisweek-issue issueheader">
-                <h2>
-                    <a class="p-name" href="{{ ./url }}">{{ data.title }}</a>
-                </h2>
-                {{> byline data}}
-            </article>
+            <strong>&numero; {{ data.Issue }}</strong>
+            <a class="p-name" href="{{ ./url }}">{{ data.Description }}</a>
+            <time>{{ isodate date }}</time>
         </li>
     {{/each}}
     </ol>

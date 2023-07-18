@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
 
-    font-family: -apple-system, system-ui, sans-serif;
+    font-family: serif;
     line-height: 1.8;
 
     background: #010125;
@@ -34,6 +34,10 @@ a {
     	text-decoration: none;
     }
 
+time {
+  font-variant-numeric: oldstyle-nums;
+}
+
 h1 {
 	font-size: 2em;
 }
@@ -60,7 +64,7 @@ blockquote:not([class]) {
 }
 
 blockquote:not([class]):before {
-	content: '\1f676';
+	content: '“';
 	font-style: normal;
 	color: #fff8;
 	float: inline-start;
